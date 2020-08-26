@@ -1,0 +1,79 @@
+.icon:hover{
+    background-color: whitesmoke;
+    border: solid 1px black;
+    opacity: 0.5;
+}
+
+.MEH{
+    width: 50%;
+}
+
+#imageOverlay{
+    opacity: 0.5;
+}       
+
+#overlay{
+    opacity: 1;
+}
+
+#cart{
+    display:block;
+}
+
+#cartEmpty{
+    display: none;
+}
+
+.pagination.li {
+    background-color:rgba(130, 222, 58, 0.2); 
+    color: #82DE3A;
+}
+
+#cartFill{
+    display: none;
+}
+
+#buttonGreen{
+    background: #57CAD5;
+}
+
+#buttonPink{
+    background:#F24F8A;
+}
+
+#content{
+    background-color: rgba(190, 195, 202, 0.3);
+}
+
+#cartBadge{
+    background-color: #57CAD5; color: white;
+}
+
+#income{
+    background: linear-gradient(278.29deg, #FBB2B4 30.05%, rgba(255, 143, 178, 0) 133.19%);
+    filter: drop-shadow(10px 15px 10px rgba(255, 143, 178, 0.25));
+    border-radius: 10px;
+}
+
+#order{
+    background: linear-gradient(278.29deg, #29DFFF 30.05%, rgba(41, 223, 255, 0) 133.19%);
+    filter: drop-shadow(10px 15px 10px rgba(41, 223, 255, 0.25));
+    border-radius: 10px;
+}
+
+#incomeYear{
+    background: linear-gradient(278.29deg, #AB84C8 30.05%, rgba(241, 201, 236, 0) 133.19%);
+    filter: drop-shadow(10px 15px 10px rgba(241, 201, 236, 0.25));
+    border-radius: 10px;
+}
+
+.icon:hover{
+    background-color: whitesmoke;
+    border: solid 1px black;
+    opacity: 0.5;
+}
+
+td{
+    color: #cecece;
+}
+

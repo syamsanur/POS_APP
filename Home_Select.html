@@ -1,0 +1,443 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POS APP</title>
+
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/css/style.css">
+
+    <script src="./assets/js/jquery.min.js"></script>
+    <script src="./assets/js/bootstrap.bundle.min.js"></script>
+
+</head>
+
+<body>
+    
+    <div class="container border card mt-5">
+
+        <!-- MODAL -->
+        <div class="modal" id="add">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <h4>Add Item</h4>
+                        <form>
+    
+                            <div class="form-group row">
+                                <label for="name" class="col-md-3 col-form-label">Name</label>
+                                    <div class="col-md">
+                                        <input type="text" class="form-control" id="inputName">
+                                    </div>
+                            </div>
+    
+                            <div class="form-group row">
+                                <label for="image" class="col-md-3 col-form-label">Image</label>
+                                    <div class="col-md">
+                                        <input type="file" class=" form-control-file" id="inputImage">
+                                    </div>
+                            </div>
+    
+                            <div class="form-group row">
+                                <label for="price" class="col-md-3 col-form-label">Price</label>
+                                    <div class="col-md-8">
+                                        <input type="text" class="form-control" id="inputPrice">
+                                    </div>
+                            </div>
+    
+                            <div class="form-group row">
+                                <label for="category" class="col-md-3 col-form-label">Category</label>
+                                    <div class="col-md-6">
+                                        <div class="btn btn-outline-dark dropdown-toggle" type="div" data-toggle="dropdown">Category</div>
+                                            <div class="dropdown-menu">
+                                                <a class="dropdown-item" href="#">Action</a>
+                                            </div>
+                                    </div>
+                            </div>
+                          </form>
+                    </div>
+                    <div class="modal-footer">
+                        <div class="btn btn-outline-light d-block w-25" data-dismiss="modal" id="buttonPink" >Cancel</div>
+                        <div class="btn btn-outline-light d-block w-25" id="buttonGreen">Add</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- END MODAL -->
+        
+        <!-- MODAL checkout -->
+        <div class="modal" id="checkout">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="row">
+                                        <div class="col-4 border">
+                                            <h3>Checkout</h3>
+                                        </div>
+                                        <div class="col-8 border">
+                                            <h5 class="float-right mt-1">Receipt no: #010410919</h5>
+                                        </div>
+                                        <div class="col-12 border">
+                                            <h6>Cashier : Pevita Pearce</h6>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 mt-5">
+                                    <div class="row border">
+                                       <div class="col-8">
+                                           <h6>Coffe Latte 1x</h6>
+                                       </div>
+                                       <div class="col-4">
+                                            <h6>Rp.15.000</h6>
+                                        </div>
+                                        <div class="col-8">
+                                            <h6>Black Forrest 1x</h6>
+                                        </div>
+                                        <div class="col-4">
+                                             <h6>Rp.30.000</h6>
+                                         </div>
+                                         <div class="col-8">
+                                            <h6>Salmon Truffle Teriyaki 1x</h6>
+                                        </div>
+                                        <div class="col-4">
+                                             <h6>Rp.60.000</h6>
+                                         </div>
+                                         <div class="col-8">
+                                            <h6>Ppn 10%</h6>
+                                        </div>
+                                        <div class="col-4">
+                                             <h6>Rp.10.500</h6>
+                                         </div>
+                                         <div class="col-8">
+                                             <h6 class="float-right">Total:</h6>
+                                         </div>
+                                         <div class="col-4">
+                                            <h6> Rp. 115.500</h6>
+                                         </div>
+                                         <div class="col-12 mt-2 ">
+                                            <h6>Payment:Cash</h6>
+                                         </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            
+                            <div class="col-12 mt-4">
+                                <div class="row mx-auto text-center">
+                                    <div class="col-12">
+                                        <div class="btn btn-outline-light d-block" id="buttonPink">Print</div>
+                                    </div>
+                                    <div class="col-12 mt-1 mb-1">
+                                        <h6><b>Or</b></h6>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="btn btn-outline-light d-block" data-dismiss="modal" id="buttonGreen">Send Email</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>      
+                </div>
+                
+                
+            </div>
+        </div>
+        <!--END MODAL -->
+
+
+        <div class="row">
+
+            <div class="col-lg-8 col-12">
+                <!-- MENU -->
+                <div class="row">
+                    <div class="col-lg-12 ">
+                        <div class="row text-center justify-content-center align-items-center">
+                            <div class="col-lg-1 col-1">
+                                <div class="btn btn-outline-dark fas fa-bars" data-toggle="collapse" data-target="#sideMenu"></div>
+                            </div>
+                            <div class="col-lg col">
+                                <h3>Food Items</h3>
+                            </div>
+                            <div class="col-lg-2 col-1">
+                                <i class="fas fa-search"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- END MENU -->
+
+                
+                <div class="row">
+                    <!-- SIDEMENU -->
+                    <div class="col-lg-1 border-top-0 text-center justify-content-center align-items-center collapse" id="sideMenu">
+
+                        <div class="row justify-content-center align-items-center">
+                                <a href="index.html">
+                                    <div class="mt-2 mb-2 icon">
+                                        <img src="./assets/icon/fork.png" class="img-fluid"></img>
+                                </a>
+                            </div>
+
+                            <a href="./report.html" >
+                                <div class="mt-2 mb-2 icon">
+                                    <img src="./assets/icon/clipboard.png" class="img-fluid"></img>
+                                </div>
+                            </a>
+
+                            <a href="#" >
+                                <div class="mt-2 mb-2 icon" data-toggle="modal" data-target="#add">
+                                    <img src="./assets/icon/add.png" class="img-fluid"></img>
+                                </div>
+                            </a>
+
+                            <a href="#" id="cartFill">
+                                <div class="mt-2 mb-2 icon">
+                                    <i class="fas fa-coffee fa-2x" onclick="cartFill()"></i>
+                                </div>
+                            </a>
+                        </div>
+                        
+                    </div>
+                    <!-- END SIDEMENU -->
+
+                    <!-- CONTENT -->
+                    
+                    <div class="col-lg border" id="content">
+                        <div class="row text-center mt-3">
+                            <div class="col-lg-4 col-6 ">
+                                    <img src="./assets//img/kopi1.png" class="img-fluid content">
+
+                                <h6>Coffe Late</h6>
+                                <p><b>Rp.15.000</b></p>
+                            </div>
+
+                            <div class="col-lg-4 col-6">
+                                <img src="./assets//img/kopi2.png" class="img-fluid content" id="imageOverlay">
+                                
+                                    <div class="card-img-overlay mt-5" id="overlay">
+                                        <i class="fas fa-check-circle fa-2x"></i>
+                                    </div>
+
+                                <h6>Coffe Late</h6>
+                                <p><b>Rp.15.000</b></p>
+                            </div>
+
+                            <div class="col-lg-4 col-6">
+                                <img src="./assets//img/kopi3.png" class="img-fluid content">
+                                <h6>Cappucino</h6>
+                                <p><b>Rp.5.000</b></p>
+                            </div>
+
+                            <div class="col-lg-4 col-6">
+                                <img src="./assets//img/kopi4.png" class="img-fluid content">
+                                <h6>Red Velvet Latte</h6>
+                                <p><b>Rp.33.000</b></p>
+                            </div>
+
+                            <div class="col-lg-4 col-6">
+                                <img src="./assets//img/kopi5.png" class="img-fluid content">
+                                <h6>Choco Rhum</h6>
+                                <p><b>Rp.10.000</b></p>
+                            </div>
+
+                            <div class="col-lg-4 col-6">
+                                <img src="./assets//img/kopi6.png" class="img-fluid content" id="imageOverlay">
+                                
+                                    <div class="card-img-overlay mt-5" id="overlay">
+                                        <i class="fas fa-check-circle fa-2x"></i>
+                                    </div>
+
+                                <h6>Black Forrest</h6>
+                                <p><b>Rp.30.000</b></p>
+                            </div>
+
+                            <div class="col-lg-4 col-6">
+                                <img src="./assets//img/kopi7.png" class="img-fluid content">
+                                <h6>Chicken Katsu Dabu-dabu</h6>
+                                <p><b>Rp.10.000</b></p>
+                            </div>
+                            
+                            <div class="col-lg-4 col-6">
+                                <img src="./assets//img/kopi8.png" class="img-fluid content" id="imageOverlay">
+                                
+                                    <div class="card-img-overlay mt-5" id="overlay">
+                                        <i class="fas fa-check-circle fa-2x"></i>
+                                    </div>
+
+                                <h6>Salmon Truffle Teriyaki</h6>
+                                <p><b>Rp.10.000</b></p>
+                            </div>
+
+                            <div class="col-lg-4 col-6">
+                                <img src="./assets//img/kopi9.png" class="img-fluid content">
+                                <h6> Wiener Schnitzel</h6>
+                                <p><b>Rp.10.000</b></p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- END CONTENT -->
+                    
+                </div>
+            </div>
+
+            <!-- CART -->
+            <div class="col-lg-4 col-12 mt-4 mt-lg-0 cart-main-page  text-center">
+                <div class="row border" id="cart">
+                    <div class="col-lg-12 justify-content-center align-items-center border-bottom mt-1">
+                        <h4 class="d-inline-block"><b>Cart</b></h4>
+                        <span class=" badge badge-pill" id="cartBadge">3</span>
+                    </div>
+                    
+                    <!-- CART CONTENT -->
+                    <div class="col-lg-12 col-12 mt-3 ">
+                        <div class="row mt-3 mb-3">
+                            <div class="col-lg-4 col-4 mx-auto">
+                                <div class="card">
+                                    <img class="img-fluid w-100 h-100" src="assets/img/kopi2.png">
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg mt-2 mt-lg-0">
+                                <h5><b>Coffe Latte</b></h5>
+                                <div class="row">
+                                    <div class="col-lg col-6 ">
+                                        <div class="row justify-content-center align-content-center">
+                                            <ul class="pagination" id="pagination">
+                                                <li class="page-item"><a class="page-link" href="#">-</a></li>
+                                                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                                <li class="page-item"><a class="page-link" href="#">+</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg col-6 mt-2">
+                                        <h6><b>Rp 10.0000</b></h6>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row mt-3 mb-3">
+                            <div class="col-lg-4 col-4 mx-auto">
+                                <div class="card">
+                                    <img class="img-fluid w-100 h-100" src="assets/img/kopi6.png">
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg mt-2 mt-lg-0">
+                                <h5><b>Black Forrest</b></h5>
+                                <div class="row">
+                                    <div class="col-lg col-6 ">
+                                        <div class="row justify-content-center align-content-center">
+                                            <ul class="pagination" id="pagination">
+                                                <li class="page-item"><a class="page-link" href="#">-</a></li>
+                                                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                                <li class="page-item"><a class="page-link" href="#">+</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg col-6 mt-2">
+                                        <h6><b>Rp 30.0000</b></h6>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row mt-3 mb-3">
+                            <div class="col-lg-4 col-4 mx-auto">
+                                <div class="card">
+                                    <img class="img-fluid w-100 h-100" src="assets/img/kopi8.png">
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg mt-2 mt-lg-0">
+                                <h5><b>Salmon Truffle</b></h5>
+                                <div class="row">
+                                    <div class="col-lg col-6 ">
+                                        <div class="row justify-content-center align-content-center">
+                                            <ul class="pagination" id="pagination">
+                                                <li class="page-item"><a class="page-link" href="#">-</a></li>
+                                                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                                <li class="page-item"><a class="page-link" href="#">+</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg col-6 mt-2">
+                                        <h6><b>Rp 60.0000</b></h6>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-12 border-top mt-5 mb-2">
+                        <div class="row">
+                            <div class="col-lg">
+                                <div class="row">
+                                    <div class="col-lg-8 col-8">
+                                        <h5 class="float-left">Total:</h5>
+                                    </div>
+                                    <div class="col-lg-4 col-4">
+                                        <h6 class="float-right">RP. 105.000</h6>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-12">
+                                <p class="float-left">*Belum Termasuk Ppn</p>
+                            </div>
+                            <div class="col-lg-12">
+                                <button class="btn btn-primary btn-outline-light btn-block mt-2" data-toggle="modal" data-target="#checkout" id="buttonGreen">Checkout</button>
+                            </div>
+                            <div class="col-lg-12">
+                                <button class="btn btn-danger btn-outline-light btn-block mt-2 mb-2" onclick="myClear()" id="buttonPink">Cancel</button>
+                            </div>
+                        </div>
+                    </div>                    
+                </div>
+                
+                <div class="row border-left border-bottom border-top border-right" id=cartEmpty>
+                    <div class="col-lg-12 justify-content-center align-items-center mt-1">
+                        <h4 class="d-inline-block"><b>Cart</b></h4>
+                        <span class=" badge badge-pill" id="cartBadge">0</span>
+                    </div>
+
+                    <div class="col-lg-12">
+                        <img src="assets/img/food-and-restaurant.png" class="MEH">
+                        <h3 class="mb-5"><b>Your cart is empty</b></h3>
+                        <h6 class="text-muted ">Please add some items from the menu</h6>        
+                    </div>
+
+                
+                </div>
+            </div>
+
+            </div>
+            <!-- END CART -->
+        </div>
+    </div>
+
+<script>
+
+function myClear(){
+    
+    document.getElementById("cart").style.display="none"
+    document.getElementById("cartEmpty").style.display="block"
+    document.getElementById("cartFill").style.display="block"
+}
+
+function cartFill(){
+    document.getElementById("cart").style.display="block"
+    document.getElementById("cartEmpty").style.display="none"
+    document.getElementById("cartFill").style.display="none"
+}
+
+</script>
+  
+
+</body>
+
+</html>
